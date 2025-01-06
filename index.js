@@ -10,7 +10,9 @@ const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
-
+app.get('/', (req, res) => {
+  res.send("Hello World")
+})
 app.post("/generate-video", async (req, res) => {
   const { text } = req.body;
 
